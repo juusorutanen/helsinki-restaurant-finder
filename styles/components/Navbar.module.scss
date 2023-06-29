@@ -1,0 +1,30 @@
+@use '../utils/' as *;
+
+.navbar {
+    color: $color-text-primary;
+    position: fixed;
+    width: 100%;
+    z-index: 10; 
+}
+
+.navbarBorder {
+    padding-bottom: 1rem; 
+    border-bottom: 1px solid;
+}
+
+.navbarContainer {
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 0.75rem; 
+    margin-top: 0.75rem;
+    margin-left: 0.75rem;
+}
+
+.logo {
+    width: 150px;
+    height: 40px;
+}
+
+
+
