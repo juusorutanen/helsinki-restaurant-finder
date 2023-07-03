@@ -1,3 +1,5 @@
+'use client';
+
 import styles from '../../../styles/components/Search.module.scss'
 import { BiSearch } from 'react-icons/bi';
 
@@ -8,7 +10,7 @@ const Search = () => {
                 
                 <div className={styles.searchBox}>
                     <div>
-                        Search
+                        Search for places
                     </div>
                     <div className={styles.searchIcon}>
                     <BiSearch size={18} />

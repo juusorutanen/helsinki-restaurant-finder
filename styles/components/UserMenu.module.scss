@@ -31,3 +31,18 @@
         display: none;
     }
 }
+
+.loginModal {
+    position: absolute;
+    width: 40vh;
+    border-radius: 0.75rem; 
+    overflow: hidden;
+    right: 0; 
+    top: 3rem; 
+}
+
+.loginFlex {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}

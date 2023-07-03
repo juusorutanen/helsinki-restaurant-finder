@@ -14,7 +14,7 @@ const Logo = () => {
         className={styles.logo}
         width="150"
         height="100"
-        src="/images/tohlogo.png"
+        src="/images/tohlogo2.png"
         />
 
     )

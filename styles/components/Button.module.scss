@@ -1,0 +1,99 @@
+@use '../utils/' as *;
+
+
+.button {
+    position: relative;
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    width: 100%;
+  
+    &.disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+  
+    &.outline {
+      &.bgWhite {
+        background-color: white;
+      }
+  
+      &.borderBlack {
+        border-color: black;
+      }
+  
+      &.textBlack {
+        color: black;
+      }
+    }
+  
+    &.bgRose500 {
+      background-color: $color-green-primary;
+    }
+  
+    &.borderRose500 {
+      border-color: none;
+    }
+  
+    &.textWhite {
+      color: white;
+    }
+  
+    &.textSm {
+      font-size: 0.875rem; /* Adjust the font size as needed */
+    }
+  
+    &.textMd {
+      font-size: 1rem; /* Adjust the font size as needed */
+    }
+  
+    &.py1 {
+      padding-top: 0.25rem; /* Adjust the top padding as needed */
+      padding-bottom: 0.25rem; /* Adjust the bottom padding as needed */
+    }
+  
+    &.py3 {
+      padding-top: 0.75rem; 
+      padding-bottom: 0.75rem; /* Adjust the bottom padding as needed */
+    }
+  
+    &.fontLight {
+      font-weight: 300; 
+    }
+  
+    &.fontSemibold {
+      font-weight: 600;
+    }
+  
+    &.border1px {
+      border-width: 1px; 
+    }
+  
+    &.border2 {
+      border-width: 2px; 
+    }
+  
+    &.absolute {
+      position: absolute;
+    }
+  
+    &.left4 {
+      left: 1rem;
+    }
+  
+    &.top3 {
+      top: 0.75rem;
+    }
+  }
+
+  
+
+    .icon {
+        position: absolute;
+        left: 1rem;
+        top: 0.75rem;
+    }
+  
+  
+  

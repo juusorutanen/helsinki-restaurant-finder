@@ -1,0 +1,84 @@
+@use '../utils/' as *;
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    z-index: 50; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .container:focus {
+        outline:none;
+    }
+}
+
+.relative {
+    position: relative;
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem; 
+    margin-left: auto;
+    margin-right: auto; 
+    height: auto; 
+
+    @include gtMedium {
+        width: 50%;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 0.5rem;
+    transform: translate(0);
+    background-color: #fff;    
+    height: 100%;
+    width: 100%;
+    outline:none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    border-bottom-width: 1px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    padding: 1.5rem;
+}
+
+.closeButton {
+    padding: 0.25rem; 
+    border:none;
+    transform: translate(0);
+    position: absolute;
+    left: 1rem;
+    background-color: transparent;
+}
+
+.modalBody {
+    position:relative;
+    padding: 1.5rem; 
+    flex: 1 1 auto; 
+}
+
+.modalFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem; 
+}
+
+.modalFooterButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap:1rem;
+}
