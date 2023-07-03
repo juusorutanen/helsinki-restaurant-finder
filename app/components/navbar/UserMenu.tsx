@@ -5,8 +5,11 @@ import MenuItem from './MenuItem';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { BiHeart } from 'react-icons/bi';
 import { useCallback, useState } from 'react';
+import useRegisterModal from '@/app/hooks/useRegisterModal';
 
 const UserMenu = () => {
+
+    const registerModal = useRegisterModal();
 
     const [isOpen,setIsOpen] = useState(false);
 
@@ -15,8 +18,9 @@ const UserMenu = () => {
     }, []);
 
     return (
-        <div className={styles.relative}>
-            <div className={styles.flex}>
+        <>
+        <div className={styles.relativeContainer}>
+            <div className={styles.flexContainer}>
                 <div className={styles.userMenuButton}>
                 <div className={styles.favorites}>
                     <BiHeart size={30}  />
@@ -39,14 +43,14 @@ const UserMenu = () => {
                     </>
                     <>
                     <MenuItem
-                    onClick={() => {}}
+                    onClick={registerModal.onOpen}
                     label="Sign up"/>
                     </>
                 </div>
                 </div>
             )}
         </div>
-
+    </>
     )
 }
 
