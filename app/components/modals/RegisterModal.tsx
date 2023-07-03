@@ -1,11 +1,13 @@
 'use client';
 import axios from 'axios';
+import styles from '../../../styles/components/RegisterModal.module.scss'
 import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle} from 'react-icons/fc';
 import { useCallback,useState } from 'react';
 import {FieldValues,SubmitHandler,useForm} from 'react-hook-form';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import Modal from './Modal';
+import Heading from '../Heading';
 
 
 
@@ -43,6 +45,14 @@ const RegisterModal  = () => {
                 setIsLoading(false);
             })
     }
+
+    const bodyContent = (
+        <div className={styles.flexContainer}>
+            <Heading title="Welcome to Taste Of Helsinki"
+            subtitle="Create an account"
+            />
+        </div>
+    )
     
     
     return (
@@ -53,6 +63,7 @@ const RegisterModal  = () => {
         actionLabel="Continue"
         onClose={registerModal.onClose}
         onSubmit={handleSubmit(onSubmit)}
+        body={bodyContent}
         />
       );
 }
