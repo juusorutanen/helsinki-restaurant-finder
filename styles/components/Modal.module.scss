@@ -1,9 +1,7 @@
 @use '../utils/' as *;
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter(true);
     position: fixed;
     inset: 0;
     z-index: 50; 
@@ -75,10 +73,3 @@
     padding: 1.5rem; 
 }
 
-.modalFooterButtons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    gap:1rem;
-}

@@ -1,0 +1,103 @@
+@use "../utils/" as *;
+
+
+.relativeContainer {
+    width: 100%;
+    position: relative;
+}
+
+
+
+.inputClass {
+  width: 100%;
+  padding: 1rem;
+  padding-top: 1.5rem;
+  font-weight: 300;
+  background-color: #fff;
+  border-radius: 0.375rem;
+  outline:none;
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    border-color: $color-outline;
+  }
+}
+
+.icon {
+    position:absolute;
+    top: 1.25rem; 
+    left: 0.5rem; 
+}
+
+.formatPriceLarge {
+    padding-left: 2.25rem; 
+}
+
+.formatPriceSmall {
+    padding-left: 1rem; 
+}
+
+.errorBorderRose {
+    border: solid 1px red;
+}
+
+.errorBorderNeutral {
+    border: solid 1px grey;
+}
+
+.errorFocusRose {
+    border: solid 1px red;
+}
+
+.errorFocusBlack {
+    border: solid 1px grey;
+}
+
+.label {
+    position: absolute;
+    cursor: auto;
+    pointer-events:none;
+    font-size: 1rem;
+    transition-duration: 150ms;
+    transform: translateY(-0.35rem);
+    top: 1.25rem;
+    z-index: 10;
+    transform-origin: top left;
+    left: 0.25rem;
+    color: $color-placeholder;
+  
+    input:focus + &,
+    input:not(:placeholder-shown) + & {
+      transform: scale(0.75) translateY(-20px);
+    }
+  
+    input:focus + &::placeholder,
+    input:not(:placeholder-shown) + &::placeholder {
+      transform: scale(1) translateY(-4px);
+    }
+  }
+  
+
+  .labelTextColor {
+    color:$color-placeholder;
+  }
+
+  .labelErrorTextColor {
+    color:red;
+  }
+  
+ 
+  
+  
+  
+  
+  
+  
+

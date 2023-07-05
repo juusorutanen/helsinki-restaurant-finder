@@ -1,0 +1,40 @@
+@mixin flexCenter($direction: false) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @if $direction {
+      flex-direction: column;
+    }
+  }
+
+  @mixin flexStart($direction: false) {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    @if $direction {
+      flex-direction: column;
+    }
+  }
+
+  @mixin buttonStyles($backgroundColor, $fontColor) {
+    padding: 0.8rem 1.5rem;
+    width: 22rem;
+    border-radius: 0.2rem;
+    outline: none;
+    border: none;
+    font-size: medium;
+    background-color: $color-green-primary;
+    color: $color-text-primary;
+    cursor: pointer;
+    transition: background 0.5s;
+    &:hover {
+      background: darken($color-green-primary, 20%)
+        radial-gradient(circle, transparent 1%, darken($color-green-primary, 20%) 1%)
+        center/15000%;
+    }
+    &:active {
+      background-color: darken($color-green-primary, 30%);
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }

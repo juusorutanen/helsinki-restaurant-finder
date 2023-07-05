@@ -1,8 +1,34 @@
 @use '../utils/' as *;
 
 
+// Body Content Styles
 .flexContainer {
-    display: flex;
-    flex-direction: column;
+    @include flexStart(true);
     gap: 1rem;
 }
+
+
+// Footer Content Styles
+
+.footerContent{
+    @include flexCenter(true);
+    gap:1rem;
+    margin-top:1rem;
+}
+
+.accountContainer {
+    font-weight: 300; 
+    color:$color-text-neutral;
+}
+
+.accountFlex {
+    @include flexCenter();
+    gap:0.5rem;
+    
+}
+
+.footerLogin {
+    font-weight: bold;
+    cursor: pointer;
+}
+

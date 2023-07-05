@@ -1,21 +1,14 @@
 @use "../utils/" as *;
 
-.center {
-    text-align: center;
-}
-
-
-.start {
-    text-align: start;
-}
 
 .title {
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 2rem; 
+    color: $color-secondary-yellow;
 }
 
 .subtitle {
-    color:pink;
+    color: $color-text-primary;
     font-weight: 200;
 }

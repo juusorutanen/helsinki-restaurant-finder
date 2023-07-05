@@ -12,15 +12,12 @@ interface HeadingProps {
 const Heading: React.FC<HeadingProps> = ({
     title,
     subtitle,
-    center
 }) => {
 
 
     const headingClasses = classNames(styles.center, {
         [styles.title]: title,
         [styles.subtitle]: subtitle,
-        [styles.center]: center,
-        [center ? styles.center : styles.start]: true,
       });
     return (
         <div className={headingClasses}>
