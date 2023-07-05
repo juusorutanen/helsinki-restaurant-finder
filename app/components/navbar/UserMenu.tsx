@@ -7,8 +7,17 @@ import { BiHeart } from 'react-icons/bi';
 import { useCallback, useState } from 'react';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import useLoginModal from '@/app/hooks/useLoginModal';
+import { SafeUser } from '@/app/types';
+import { signOut } from 'next-auth/react';
 
-const UserMenu = () => {
+
+interface UserMenuProps {
+    currentUser?: SafeUser | null
+}
+
+const UserMenu: React.FC<UserMenuProps> = ({
+    currentUser
+}) => {
 
     const registerModal = useRegisterModal();
     const loginModal = useLoginModal();
@@ -39,16 +48,33 @@ const UserMenu = () => {
             {isOpen && (
                 <div className={styles.loginModal}>
                 <div className={styles.loginFlex}>
+                    {currentUser ? (
+                    <>
+                    <MenuItem
+                    onClick={() => {}}
+                    label={`Logged in as ${currentUser.name}`}
+                    />
+                    <MenuItem
+                    onClick={() => {}}
+                    label="My favorites"/>
+                    <MenuItem
+                    onClick={() => signOut()}
+                    label="Log out"/>
+                    </>
+
+                    ) : (
                     <>
                     <MenuItem
                     onClick={loginModal.onOpen}
-                    label="Login"/>
-                    </>
-                    <>
+                    label="Login"
+                    />
                     <MenuItem
                     onClick={registerModal.onOpen}
-                    label="Sign up"/>
+                    label="Sign up"
+                    />
                     </>
+                    )}
+                
                 </div>
                 </div>
             )}
