@@ -6,10 +6,13 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { BiHeart } from 'react-icons/bi';
 import { useCallback, useState } from 'react';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
+import useLoginModal from '@/app/hooks/useLoginModal';
 
 const UserMenu = () => {
 
     const registerModal = useRegisterModal();
+    const loginModal = useLoginModal();
+
 
     const [isOpen,setIsOpen] = useState(false);
 
@@ -38,7 +41,7 @@ const UserMenu = () => {
                 <div className={styles.loginFlex}>
                     <>
                     <MenuItem
-                    onClick={() => {}}
+                    onClick={loginModal.onOpen}
                     label="Login"/>
                     </>
                     <>
