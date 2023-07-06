@@ -1,0 +1,7 @@
+@use '../utils/' as *;
+
+.flexContainer {
+    @include flexCenterBetween();
+    padding-top: 1rem; 
+    overflow-x: auto; 
+}

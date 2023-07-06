@@ -33,9 +33,9 @@ const UserMenu: React.FC<UserMenuProps> = ({
         <>
         <div className={styles.relativeContainer}>
             <div className={styles.flexContainer}>
-                <div className={styles.userMenuButton}>
+                <div className={styles.userMenuButtons}>
                 <div className={styles.favorites}>
-                    <BiHeart size={30}  />
+                    <BiHeart size={30} />Favorites
                 </div>
                 <div className={styles.menu}>
                     <AiOutlineMenu size={30}/>

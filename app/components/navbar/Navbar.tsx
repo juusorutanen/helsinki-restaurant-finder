@@ -3,6 +3,7 @@ import styles from '../../../styles/components/Navbar.module.scss'
 import Container from '../Container';
 import Search from './Search';
 import UserMenu from './UserMenu';
+import Categories from './Categories';
 import Image from '../navbar/Logo';
 import { SafeUser } from '@/app/types';
 
@@ -25,6 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 </div>
             </Container>
             </div>
+            <Categories/>
         </div>
     )
 }

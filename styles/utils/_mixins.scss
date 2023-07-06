@@ -7,6 +7,15 @@
     }
   }
 
+  @mixin flexCenterBetween($direction: false) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @if $direction {
+      flex-direction: column;
+    }
+  }
+
   @mixin flexStart($direction: false) {
     display: flex;
     align-items: start;
