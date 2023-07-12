@@ -23,7 +23,7 @@ export default async function Home() {
   return (
     <ClientOnly>
       <Container>
-        <div className={styles.grid}>
+        <div className={styles.gridMain}>
           {places.map((place: any) => {
             return (
               <PlaceCard

@@ -7,6 +7,7 @@ import ToasterProvider from './providers/ToasterProvider';
 import LoginModal from './components/modals/LoginModal';
 import getCurrentUser from './actions/getCurrentUser';
 
+
 const font = Inter({ subsets: ['latin'] })
 
 export const metadata = {

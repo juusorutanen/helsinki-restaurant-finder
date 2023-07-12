@@ -9,6 +9,7 @@ import useRegisterModal from '@/app/hooks/useRegisterModal';
 import useLoginModal from '@/app/hooks/useLoginModal';
 import { SafeUser } from '@/app/types';
 import { signOut } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 
 interface UserMenuProps {
@@ -21,6 +22,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
 
     const registerModal = useRegisterModal();
     const loginModal = useLoginModal();
+    const router = useRouter();
 
 
     const [isOpen,setIsOpen] = useState(false);
@@ -34,7 +36,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
         <div className={styles.relativeContainer}>
             <div className={styles.flexContainer}>
                 <div className={styles.userMenuButtons}>
-                <div className={styles.favorites}>
+                <div onClick={() => router.push('/favorites')}className={styles.favorites}>
                     <BiHeart size={30} />Favorites
                 </div>
                 <div className={styles.menu}>

@@ -1,10 +1,29 @@
 @use '../utils/' as *;
 
-.grid {
+.gridMain {
     padding-top: 10rem;
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr)); 
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
     gap: 2rem;
+
+    @include ltSmall {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); 
+  }
+  }
+
+  .header {
+    padding-top: 9rem;
+  }
+
+  .gridSecondary {
+    padding-top:1rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    gap: 2rem;
+
+    @include ltSmall {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); 
+  }
   }
 
   

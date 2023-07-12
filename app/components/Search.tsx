@@ -8,7 +8,9 @@ const Search = () => {
     const pathname = usePathname();
     const isMainPage = pathname === '/';
 
-    if (!isMainPage) {
+    const isFavoritesPage = pathname === '/favorites';
+
+    if (!isMainPage && !isFavoritesPage) {
         return null;
     }
     return (

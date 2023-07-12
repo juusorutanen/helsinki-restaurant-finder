@@ -4,6 +4,7 @@ import Container from '../Container';
 import CategoryBox from '../CategoryBox';
 import { FaPizzaSlice, FaHamburger} from 'react-icons/fa';
 import { GiTacos, GiNoodles,GiSteak,GiDonerKebab,GiSandwich} from 'react-icons/gi'
+import { LuVegan } from 'react-icons/lu'
 import { useSearchParams, usePathname } from 'next/navigation';
 
 
@@ -42,6 +43,11 @@ export const categories = [
         label: 'Sandwich',
         icon: GiSandwich,
         description: 'This place has sandwiches!'
+    },
+    {
+        label: 'Vegan',
+        icon: LuVegan,
+        description: 'This place has sandwiches!'
     }
 ]
 
@@ -52,8 +58,9 @@ const Categories = () => {
     const pathname = usePathname();
 
     const isMainPage = pathname === '/';
+    const isFavoritesPage = pathname === '/favorites';
 
-    if (!isMainPage) {
+    if (!isMainPage && !isFavoritesPage) {
         return null;
     }
     return ( 

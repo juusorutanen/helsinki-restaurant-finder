@@ -1,0 +1,53 @@
+@use '../utils/' as *;
+
+
+.gridChild {
+    grid-column: span 1 / span 1; 
+    cursor: pointer;
+    
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:1rem;
+}
+
+
+.relative {
+    aspect-ratio: 1 / 1; 
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.image {
+    object-fit: cover; 
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.heartButton {
+    top: 0.75rem; 
+    right: 0.75rem; 
+}
+
+.name {
+    position: absolute;
+    color:white;
+    top: 10%;
+    font-size: 0.95rem;
+    left: 5%;
+    
+}
+
+.url {
+    position: absolute;
+    background-color: lightgreen;
+    padding:4px;
+    border-radius: 10px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
