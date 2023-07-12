@@ -13,6 +13,7 @@ import Heading from '../Heading';
 import Input from '../inputs/Input';
 import { toast } from 'react-hot-toast';
 import Button from '../Button';
+import Logo from '../navbar/Logo';
 import { useRouter } from 'next/navigation';
 
 
@@ -60,9 +61,15 @@ const LoginModal  = () => {
         })
     }
 
+    const toggle = useCallback(() => {
+        loginModal.onClose();
+        registerModal.onOpen();
+    }, [loginModal,registerModal]);
+
     const bodyContent = (
         <div className={styles.flexContainer}>
-            <Heading title="Welcome back"
+            <Logo/>
+            <Heading title="Welcome back!"
             subtitle="Login to your account"
             />
             <Input 
@@ -91,22 +98,22 @@ const LoginModal  = () => {
             outline
             label="Continue with Google"
             icon={FcGoogle}
-            onClick={()=>{}}
+            onClick={()=> signIn('google')}
             />
              <Button
             outline
             label="Continue with Github"
             icon={AiFillGithub}
-            onClick={()=>{}}
+            onClick={()=> signIn('github')}
             />
             <div className={styles.accountContainer}>
                 <div className={styles.accountFlex}>
                     <div>
-                    Already have an account?
+                    Don't have an account?
                     </div>
                     <div className={styles.footerLogin}
-                    onClick={registerModal.onClose}>
-                    Log in
+                    onClick={toggle}>
+                    Register here
                     </div>
                 </div>
             </div>
@@ -120,7 +127,7 @@ const LoginModal  = () => {
         disabled={isLoading}
         isOpen={loginModal.isOpen}
         title="Login"
-        actionLabel="Continue"
+        actionLabel="Continue with email"
         onClose={loginModal.onClose}
         onSubmit={handleSubmit(onSubmit)}
         body={bodyContent}

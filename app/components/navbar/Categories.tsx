@@ -3,7 +3,7 @@ import styles from '../../../styles/components/Categories.module.scss'
 import Container from '../Container';
 import CategoryBox from '../CategoryBox';
 import { FaPizzaSlice, FaHamburger} from 'react-icons/fa';
-import { GiTacos} from 'react-icons/gi'
+import { GiTacos, GiNoodles,GiSteak,GiDonerKebab,GiSandwich} from 'react-icons/gi'
 import { useSearchParams, usePathname } from 'next/navigation';
 
 
@@ -22,6 +22,26 @@ export const categories = [
         label: 'Mexican',
         icon: GiTacos,
         description: 'This place has tacos!'
+    },
+    {
+        label: 'Asian',
+        icon: GiNoodles,
+        description: 'This place has Asian food!'
+    },
+    {
+        label: 'Steak',
+        icon: GiSteak,
+        description: 'This place has Steaks!'
+    },
+    {
+        label: 'Kebab',
+        icon: GiDonerKebab,
+        description: 'This place has Kebab!'
+    },
+    {
+        label: 'Sandwich',
+        icon: GiSandwich,
+        description: 'This place has sandwiches!'
     }
 ]
 

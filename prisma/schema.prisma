@@ -60,9 +60,7 @@ model Place {
   street_address         String
   www                    String?
 
-  userId String @db.ObjectId
+  userId                 String? @db.ObjectId
 
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@map("places")
+  user User? @relation(fields: [userId], references: [id], onDelete: Cascade)
 }

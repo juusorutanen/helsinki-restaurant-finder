@@ -6,10 +6,11 @@ import styles from '../../../styles/components/Navbar.module.scss'
 
 
 const Logo = () => {
-    const router = useRouter()
+    const router = useRouter();
 
     return (
         <Image
+        onClick={() => router.push('/')}
         alt="Logo"
         className={styles.logo}
         width="150"

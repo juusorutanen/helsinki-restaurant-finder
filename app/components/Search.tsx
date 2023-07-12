@@ -1,9 +1,16 @@
 'use client';
 
-import styles from '../../../styles/components/Search.module.scss'
+import styles from '../../styles/components/Search.module.scss';
 import { BiSearch } from 'react-icons/bi';
+import { usePathname } from 'next/navigation';
 
 const Search = () => {
+    const pathname = usePathname();
+    const isMainPage = pathname === '/';
+
+    if (!isMainPage) {
+        return null;
+    }
     return (
         <div className={styles.search}>
             <div className={styles.searchFlex}>

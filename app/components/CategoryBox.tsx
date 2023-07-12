@@ -1,3 +1,5 @@
+'use client';
+
 import { IconType } from "react-icons";
 import styles from '../../styles/components/CategoryBox.module.scss'
 import { useRouter, useSearchParams } from "next/navigation";

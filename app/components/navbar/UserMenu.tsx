@@ -41,7 +41,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                     <AiOutlineMenu size={30}/>
                 </div>
                 <div onClick={toggleOpen}>
-                    <Avatar/>
+                    <Avatar src={currentUser?.image}/>
                 </div>
                 </div>
             </div>

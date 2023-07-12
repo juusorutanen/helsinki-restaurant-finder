@@ -1,0 +1,11 @@
+@use '../utils/' as *;
+
+.grid {
+    padding-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr)); 
+    gap: 2rem;
+  }
+
+  
+  

@@ -6,11 +6,14 @@ import { FcGoogle} from 'react-icons/fc';
 import { useCallback,useState } from 'react';
 import {FieldValues,SubmitHandler,useForm} from 'react-hook-form';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
+import useLoginModal from '@/app/hooks/useLoginModal';
 import Modal from './Modal';
 import Heading from '../Heading';
 import Input from '../inputs/Input';
 import { toast } from 'react-hot-toast';
 import Button from '../Button';
+import { signIn } from 'next-auth/react';
+import Logo from '../navbar/Logo';
 
 
 
@@ -18,6 +21,7 @@ import Button from '../Button';
 const RegisterModal  = () => {
 
     const registerModal = useRegisterModal();
+    const loginModal = useLoginModal();
     const [isLoading,setIsLoading] = useState(false);
 
     const {
@@ -49,10 +53,16 @@ const RegisterModal  = () => {
             })
     }
 
+    const toggle = useCallback(() => {
+        registerModal.onClose();
+        loginModal.onOpen();
+    }, [registerModal,loginModal]);
+
     const bodyContent = (
         <div className={styles.flexContainer}>
+            <Logo/>
             <Heading title="Welcome to Taste Of Helsinki"
-            subtitle="Create an account"
+            subtitle="Create an account to add favorites"
             />
             <Input 
                 id="email"
@@ -88,13 +98,13 @@ const RegisterModal  = () => {
             outline
             label="Continue with Google"
             icon={FcGoogle}
-            onClick={()=>{}}
+            onClick={()=> signIn('google')}
             />
              <Button
             outline
             label="Continue with Github"
             icon={AiFillGithub}
-            onClick={()=>{}}
+            onClick={()=> signIn('github')}
             />
             <div className={styles.accountContainer}>
                 <div className={styles.accountFlex}>
@@ -102,7 +112,7 @@ const RegisterModal  = () => {
                     Already have an account?
                     </div>
                     <div className={styles.footerLogin}
-                    onClick={registerModal.onClose}>
+                    onClick={toggle}>
                     Log in
                     </div>
                 </div>

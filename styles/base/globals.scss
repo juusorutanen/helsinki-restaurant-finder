@@ -2,12 +2,11 @@
 
 
 h1 {
-    font-size: $font-size-h1/1.25;
+    font-size: $font-size-h1;
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.025em;
     margin: 0;
-    padding-bottom: 2rem;
     color: $color-text-primary;
 }
 
@@ -75,4 +74,9 @@ h2 {
 
 .u-emphasis {
     font-weight: bold;
+}
+
+.childrenContainer {
+    padding-top: 7rem; 
+    padding-bottom: 5rem; 
 }

@@ -1,0 +1,22 @@
+@use '../utils/' as *;
+
+.header {
+   display: flex;
+   justify-content: space-between;
+}
+
+.favorites {
+    display: flex;
+    gap: 2rem;
+}
+
+
+.locationHeader {
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+}
+
+.descContainer {
+    width: 70%;
+}

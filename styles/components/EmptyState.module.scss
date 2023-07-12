@@ -1,0 +1,7 @@
+@use '../utils/' as *;
+
+.flexContainer {
+    @include flexCenter(true);
+    height: 60vh;
+    gap:1rem
+}

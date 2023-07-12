@@ -4,6 +4,15 @@
     max-width: 2520px;
     margin-left: auto;
     margin-right: auto; 
-    padding-left: 1rem;
-    padding-right: 1rem; 
+    padding-left: 3rem;
+    padding-right: 3rem; 
+
+    @include ltLarge {
+        padding-left: 1rem;
+        padding-right: 1rem; 
+    }
+
+    @include ltSmall {
+        font-size: 1rem;
+    }
 }

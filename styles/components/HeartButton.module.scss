@@ -1,0 +1,13 @@
+
+@use '../utils/' as *;
+
+.heart {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .heartIcons {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+  }

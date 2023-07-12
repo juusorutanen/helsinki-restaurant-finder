@@ -1,13 +1,13 @@
 import '../styles/main.scss'
 import Navbar from './components/navbar/Navbar';
 import ClientOnly from './components/ClientOnly';
-import { Nunito } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import RegisterModal from './components/modals/RegisterModal';
 import ToasterProvider from './providers/ToasterProvider';
 import LoginModal from './components/modals/LoginModal';
 import getCurrentUser from './actions/getCurrentUser';
 
-const font = Nunito({ subsets: ['latin'] })
+const font = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'TasteOfHelsinki',
@@ -29,7 +29,9 @@ export default async function RootLayout({
         <RegisterModal/>
         <Navbar currentUser={currentUser}/>
       </ClientOnly>
-      {children}
+        <div className="childrenContainer">
+          {children}
+        </div>
       </body>
     </html>
   )
