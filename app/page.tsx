@@ -7,9 +7,12 @@ import EmptyState from './components/EmptyState';
 import getPlaces from './actions/getPlaces';
 import PlaceCard from './components/places/PlaceCard';
 
+
 export default async function Home() {
   const places = await getPlaces();
   const currentUser = await getCurrentUser();
+  
+  
   
   if (places.length === 0) {
     return (
@@ -17,9 +20,7 @@ export default async function Home() {
         <EmptyState showReset/>
       </ClientOnly>
     )
-  }
-
-  
+  }  
   return (
     <ClientOnly>
       <Container>

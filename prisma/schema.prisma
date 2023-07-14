@@ -64,3 +64,8 @@ model Place {
 
   user User? @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
+
+model SearchQuery {
+  id    String @id @map("_id") @default(cuid())
+  query String
+}

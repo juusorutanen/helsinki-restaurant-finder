@@ -7,8 +7,7 @@ import Heading from "../components/Heading";
 import getCurrentUser from "../actions/getCurrentUser";
 import getFavoritePlaces from "../actions/getFavoritePlaces";
 import FavoritesCard from "./FavoritesCard";
-import Categories from "../components/navbar/Categories";
-import Search from "../components/Search";
+
 
 const FavoritesPage = async () => {
 
