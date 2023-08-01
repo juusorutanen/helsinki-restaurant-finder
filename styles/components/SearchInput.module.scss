@@ -1,68 +1,79 @@
 @use '../utils/' as *;
 
-.search {
-    border-radius: 9999px; 
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; 
+
+.searchForm {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin:20px 200px;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); 
-    background-color: white;
-    cursor: pointer;
 
-    @include ltMedium {
-        width: auto;
-        
-    }
 }
-
-.searchField {
-    padding: 10px 15px;
-    min-width: 55%;
-    font-size: 1rem;
-    line-height: 1.5em;
-    color: #373D41;
-    background-color: #FFF;
-    background-clip: padding-box;
-    border: 1px solid #C5C5C7;
-    border-radius: 6px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    flex-grow: 1;
-    border-right: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.searchSubmit{
-        background-color:#1a1a1a;
-        color: #ffffff;
-        font-weight: 700;
-        text-decoration: none;
-        white-space: normal;
-        -webkit-transition: none;
-        transition: none;
-        cursor: pointer;
-        outline: 0;
-        padding: 14px 24px 13px;
+  
+    .form {
+      position: relative;
+      outline: 0;
+      display: flex;
+      width: 30rem;
+      background: white;
+      border-radius: 0.7rem;
+    
+      input, button {
+        height: 3rem;
+        border: 0;
+        color: black;
         font-size: 1rem;
-        line-height: 1.25rem;
-        border-radius: 6px;
-        border-width: 0;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-    .searchForm .inputGroup{
-      text-align:center;
-    }
+      }
+  
+      input[type="search"] {
+        outline: 0;
+        width: 100%;
+        background:white;
+        padding: 0 1.6rem;
+        border-radius: 0.7rem;
+        appearance: none;
+        transition: all 0.3s cubic-bezier(0,0,0.43,1.49);
+        transition-property: width, border-radius;
+        z-index: 1;
+        position: relative;
+      }
 
-.searchIcon {
-    padding:10px;
-    display: flex;
-    background-color: $color-green-primary;
-    color:white;
-    border-radius: 50%;
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
 }
-
+  
+      button {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 6rem;
+        font-weight: bold;
+        background: $color-green-primary;
+        color:black;
+        border-radius: 0 0.7rem 0.7rem 0;
+        cursor: pointer;
+      }
+  
+      input:not(:placeholder-shown) {
+        border-radius: 0.7rem 0 0 0.7rem;
+        width: calc(100% - 6rem);
+        + button {
+          display: block;
+        }
+      }
+  
+      label {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 0;
+        border: 0;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+      }
+    }
+    
+  
 

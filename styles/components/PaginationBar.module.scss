@@ -1,0 +1,49 @@
+@use '../utils/' as *;
+
+.paginationBar {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.join {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .join-item {
+    display: flex;
+    padding: 5px 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .join-item.btn-active {
+    background-color: #ccc;
+    pointer-events: none;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .pointer-events-none {
+    pointer-events: none;
+  }
+  

@@ -3,14 +3,27 @@
 .navbar {
     color: $color-text-primary;
     position: fixed;
+    
     width: 100%;
     z-index: 10; 
-    background-color: $color-primary;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../../public/images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+.heroText {
+    color:white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    padding: 1rem;
+}
 }
 
 .navbarBorder {
-    padding-bottom: 1rem; 
+    padding-bottom: 1rem;
 }
+
 
 .navbarContainer {
     display:flex;

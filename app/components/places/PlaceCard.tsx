@@ -12,14 +12,10 @@ import styles from "../../../styles/components/PlaceCard.module.scss"
 
 interface PlaceCardProps {
     data: Place;
-    onAction?: (id:string) => void;
-    disabled?: boolean;
     currentUser?: SafeUser | null;
 }
 const PlaceCard: React.FC<PlaceCardProps> =({
     data,
-    onAction,
-    disabled,
     currentUser
 }) => {
     const router = useRouter();

@@ -2,6 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
+import { BiSearch } from "react-icons/bi";
 import styles from "../../styles/components/SearchInput.module.scss"
 
 const SearchInput = () => {
@@ -23,17 +24,19 @@ const SearchInput = () => {
   };
 
   return (
-    <form onSubmit={onSearch} className={styles.searchForm}>
-      <div className={styles.inputGroup}>
-      <input
-        value={searchQuery || ""}
-        onChange={(event) => setSearchQuery(event.target.value)}
-        className={styles.searchField}
-        placeholder="What are you looking for?"
-      />
-      <input type="submit" className={styles.searchSubmit}/>
+    <div className={styles.searchForm}>
+      <form className={styles.form} onSubmit={onSearch}>
+          <input
+            value={searchQuery || ""}
+            onChange={(event) => setSearchQuery(event.target.value)}
+            className={styles.searchField}
+            placeholder="Search for restaurants..."
+            type="search"
+          />
+          <button type="submit"><BiSearch fill="white"/></button>
+      </form>
       </div>
-    </form>
+      
   );
 };
 

@@ -2,7 +2,6 @@ import EmptyState from "../components/EmptyState";
 import ClientOnly from "../components/ClientOnly";
 import styles from '../../styles/layout/Grid.module.scss'
 import Container from "../components/Container";
-import Heading from "../components/Heading";
 
 import getCurrentUser from "../actions/getCurrentUser";
 import getFavoritePlaces from "../actions/getFavoritePlaces";

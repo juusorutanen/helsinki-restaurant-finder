@@ -5,6 +5,9 @@ import Spinner from "./Spinner";
 import useSWR from "swr";
 import PlaceCard from "../components/places/PlaceCard"
 import styles from "../../styles/layout/Grid.module.scss"
+import Container from "../components/Container";
+
+
 
 
 
@@ -45,18 +48,22 @@ const SearchPage = () => {
     return null;
   }
 
+  
+
 
   return (
     <>
+    <Container>
       <span className="text-xl">
       Showing results for:{" "}
         <span className="font-semibold">{searchQuery}</span>
       </span>
-      <div className={styles.gridMain}>
+      <div className={styles.gridSecondary}>
       {data.places.map((place:any) => (
         <PlaceCard key={place.id} data={place} />
       ))}
       </div>
+      </Container>
     </>
   );
 };
