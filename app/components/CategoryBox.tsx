@@ -20,8 +20,6 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
     selected
 
 
-
-
 }) => {
     const router = useRouter();
     const params = useSearchParams();
@@ -35,11 +33,11 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
 
         const updatedQuery: any = {
             ...currentQuery,
-            category: label
+            desc: label
         }
 
-        if (params?.get('category') === label) {
-        delete updatedQuery.category
+        if (params?.get('desc') === label) {
+        delete updatedQuery.desc
         }
 
         const url = qs.stringifyUrl({

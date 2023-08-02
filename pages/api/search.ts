@@ -34,9 +34,7 @@ export default async function handler(
         },
       });
 
-      /**
-       * Save search
-       */
+    
       await prisma.searchQuery.create({
         data: {
           query,

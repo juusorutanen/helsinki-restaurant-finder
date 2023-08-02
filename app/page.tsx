@@ -1,32 +1,25 @@
 
 import ClientOnly from './components/ClientOnly';
-import getCurrentUser from './actions/getCurrentUser';
 import Container from './components/Container';
 import styles from '../styles/layout/Grid.module.scss'
 import EmptyState from './components/EmptyState';
-import getPlaces from './actions/getPlaces';
 import PlaceCard from './components/places/PlaceCard';
 import PaginationBar from './components/PaginationBar';
 import prisma from '@/app/libs/prismadb';
 
+import getPlaces, { 
+  IPlacesParams
+} from "@/app/actions/getPlaces";
+import getCurrentUser from "@/app/actions/getCurrentUser";
+
 interface HomeProps {
-  searchParams: { page: string}
-}
+  searchParams: IPlacesParams
+};
 
-
-export default async function Home({ searchParams :  { page = "1" } } : HomeProps) {
-  const currentPage = parseInt(page);
-
-  const pageSize = 12
-  const totalPlaceCount = await prisma.place.count();
-  const totalPages = Math.ceil(totalPlaceCount / pageSize);
-
-  const places = await prisma.place.findMany({
-    orderBy: { id: "desc" },
-    skip: (currentPage - 1) * pageSize,
-    take: pageSize,
-  });
+const Home = async ({ searchParams }: HomeProps) => {
+  const places = await getPlaces(searchParams);
   const currentUser = await getCurrentUser();
+ 
   
   
   
@@ -51,10 +44,9 @@ export default async function Home({ searchParams :  { page = "1" } } : HomeProp
             )
           })}
         </div>
-        {totalPages > 1 && (
-        <PaginationBar currentPage={currentPage} totalPages={totalPages}/>
-        )}
       </Container>
     </ClientOnly>
   )
 }
+
+export default Home;

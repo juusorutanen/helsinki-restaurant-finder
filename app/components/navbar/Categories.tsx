@@ -12,42 +12,34 @@ export const categories = [
     {
         label: 'Pizza',
         icon: FaPizzaSlice,
-        description: 'This place has pizza!'
     },
     {
         label: 'Burger',
         icon: FaHamburger,
-        description: 'This place has burgers!'
     },
     {
         label: 'Mexican',
         icon: GiTacos,
-        description: 'This place has tacos!'
     },
     {
         label: 'Asian',
         icon: GiNoodles,
-        description: 'This place has Asian food!'
     },
     {
         label: 'Steak',
         icon: GiSteak,
-        description: 'This place has Steaks!'
     },
     {
         label: 'Kebab',
         icon: GiDonerKebab,
-        description: 'This place has Kebab!'
     },
     {
         label: 'Sandwich',
         icon: GiSandwich,
-        description: 'This place has sandwiches!'
     },
     {
         label: 'Vegan',
         icon: LuVegan,
-        description: 'This place has sandwiches!'
     }
 ]
 
@@ -63,6 +55,7 @@ const Categories = () => {
     if (!isMainPage && !isFavoritesPage) {
         return null;
     }
+
     return ( 
         <Container>
             <div className={styles.flexContainer}>
