@@ -9,6 +9,18 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition-timing-function: ease-in;
+    transition:0.5s;
+
+    &.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* Add transition properties for opacity and transform */
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(-100%);
+    
    
 .heroText {
     color:white;
