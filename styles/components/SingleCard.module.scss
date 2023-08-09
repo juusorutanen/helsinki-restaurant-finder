@@ -3,9 +3,12 @@
 .header {
    display: flex;
    justify-content: space-between;
-   body {
-background-image: url(/public//images/nnnoise.svg);
-  }
+}
+
+.cardContainer {
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .favorites {
@@ -22,4 +25,12 @@ background-image: url(/public//images/nnnoise.svg);
 
 .descContainer {
     width: 70%;
+}
+
+.url {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 30%;
+    text-align: center;
 }

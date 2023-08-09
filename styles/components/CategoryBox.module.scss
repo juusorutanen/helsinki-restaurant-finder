@@ -3,5 +3,6 @@
 .flexContainer {
     @include flexCenter(true);
     cursor: pointer;
-    color: $color-background-neutral;
+    color: white;
+    padding-bottom: 1rem;
 }

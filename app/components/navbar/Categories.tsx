@@ -49,12 +49,8 @@ const Categories = () => {
     const category = params?.get('category')
     const pathname = usePathname();
 
-    const isMainPage = pathname === '/';
-    const isFavoritesPage = pathname === '/favorites';
+    
 
-    if (!isMainPage && !isFavoritesPage) {
-        return null;
-    }
 
     return ( 
         <Container>

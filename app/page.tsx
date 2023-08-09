@@ -16,11 +16,10 @@ interface HomeProps {
   searchParams: IPlacesParams
 };
 
-const Home = async ({ searchParams }: HomeProps) => {
+const Home = async ({ searchParams}: HomeProps) => {
   const places = await getPlaces(searchParams);
   const currentUser = await getCurrentUser();
- 
-  
+
   
   
   if (places.length === 0) {
@@ -44,6 +43,7 @@ const Home = async ({ searchParams }: HomeProps) => {
             )
           })}
         </div>
+        
       </Container>
     </ClientOnly>
   )

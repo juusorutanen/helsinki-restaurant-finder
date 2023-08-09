@@ -26,6 +26,7 @@ export default async function getPlaces(
       orderBy: {
         name: 'asc', 
       },
+      take: 100, 
       
     });
 

@@ -1,13 +1,11 @@
 'use client'
 import styles from '../../../styles/components/Navbar.module.scss'
 import Container from '../Container';
-
 import UserMenu from './UserMenu';
 import Categories from './Categories';
 import Image from '../navbar/Logo';
 import { SafeUser } from '@/app/types';
-import Search from '../SearchInput';
-import Heading from '../Heading';
+import SearchBar from '../SearchBar';
 
 interface NavbarProps {
     currentUser?: SafeUser | null;
@@ -28,9 +26,10 @@ const Navbar: React.FC<NavbarProps> = ({
             </Container>
             </div>
             <div className={styles.heroText}>
-                <h1>Find your favorite restaurants from Helsinki</h1>
+                <h1>Find your <span>favorite</span> restaurants from Helsinki</h1>
+                <h2>All in one place</h2>
             </div>
-            <Search/>
+            <SearchBar/>
             <Categories/>
         </div>
     )

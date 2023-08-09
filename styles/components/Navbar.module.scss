@@ -1,22 +1,33 @@
 @use '../utils/' as *;
 
 .navbar {
-    color: $color-text-primary;
+    color: white;
     position: fixed;
-    
     width: 100%;
     z-index: 10; 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../../public/images/background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../../public/images/foodbackground.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+   
 .heroText {
     color:white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     white-space: nowrap;
-    padding: 1rem;
+    padding: 3rem;
+    span {
+        color:orange;
+    }
+
+    h2 {
+        font-weight: 200;
+    }
+    h1 {
+        line-height: 0.1;
+    }
 }
 }
 

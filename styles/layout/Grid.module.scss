@@ -1,7 +1,6 @@
 @use '../utils/' as *;
 
 .gridMain {
-    padding-top: 10rem;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr)); 
     gap: 2rem;
@@ -11,9 +10,7 @@
   }
   }
 
-  .header {
-    padding-top: 9rem;
-  }
+  
 
   .gridSecondary {
     padding-top:1rem;
