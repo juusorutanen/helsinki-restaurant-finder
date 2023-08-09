@@ -1,7 +1,8 @@
 import prisma from "@/app/libs/prismadb";
 
 export interface IPlacesParams { 
-  desc?: string;
+  search?: string; 
+  category?: string;
 }
 
 export default async function getPlaces(
@@ -9,25 +10,48 @@ export default async function getPlaces(
 ) {
   try {
     const {
-      desc,
+      search,
+      category
     } = params;
 
-
-    let query: any = {};
-
-    if (desc) {
-      query.desc = {
-        contains: desc,
-        mode: "insensitive",
-      };
+    let where: any = {};
+  
+    if (search) {
+      where.OR = [
+        {
+          desc: {
+            contains: search,
+            mode: "insensitive",
+          },
+        },
+        {
+          street_address: {
+            contains: search,
+            mode: "insensitive",
+          },
+        },
+        {
+          name: {
+            contains: search,
+            mode: "insensitive",
+          },
+        },
+      ];
     }
+
+    if (category) {
+      where.desc = {
+          contains: category,
+          mode: "insensitive"
+      };
+  }
+
     const places = await prisma.place.findMany({
-      where:query,
+      where: where,
       orderBy: {
         name: 'asc', 
       },
       take: 100, 
-      
     });
 
     return places;
@@ -35,6 +59,7 @@ export default async function getPlaces(
     throw new Error(error);
   }
 }
+
 
 
 
