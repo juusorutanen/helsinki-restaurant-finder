@@ -6,7 +6,6 @@ import RegisterModal from './components/modals/RegisterModal';
 import ToasterProvider from './providers/ToasterProvider';
 import LoginModal from './components/modals/LoginModal';
 import getCurrentUser from './actions/getCurrentUser';
-import Search from './components/SearchInput';
 
 
 const font = Inter({ subsets: ['latin'] })
@@ -25,7 +24,6 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        
       <ClientOnly>
         <ToasterProvider/>
         <LoginModal/>

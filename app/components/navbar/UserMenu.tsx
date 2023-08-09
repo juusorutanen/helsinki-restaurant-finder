@@ -40,7 +40,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                     <BiHeart size={30} />Favorites
                 </div>
                 <div className={styles.menu}>
-                    <AiOutlineMenu size={30}/>
+                    <AiOutlineMenu onClick={toggleOpen} size={30}/>
                 </div>
                 <div onClick={toggleOpen}>
                     <Avatar src={currentUser?.image}/>
