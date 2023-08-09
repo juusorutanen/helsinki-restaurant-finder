@@ -26,32 +26,31 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
 
     const handleClick = useCallback(() => {
         let currentQuery = {};
-
+    
         if (params) {
             currentQuery = qs.parse(params.toString());
         }
-
+    
         const updatedQuery: any = {
             ...currentQuery,
-            desc: label
+            category: label // Use a consistent query parameter name, like 'category'
         }
-
-        if (params?.get('desc') === label) {
-        delete updatedQuery.desc
+    
+        if (params?.get('category') === label) {
+            delete updatedQuery.category;
         }
-
+    
         const url = qs.stringifyUrl({
             url: '/',
             query: updatedQuery
-        }, {skipNull: true});
-        
+        }, { skipNull: true });
+    
         router.push(url);
     }, [label, params, router]);
-/* const selectedClass = styles.isSelected ? styles.isCompleted : ''; */
-
+    
     return ( 
         <div onClick={handleClick} className={styles.flexContainer}
-        style={selected ? {borderBottom: "1px solid black" ,color:"black"} : {borderBottom: "none"}}>
+        style={selected ? {borderBottom: "1px solid orange" ,color:"orange"} : {borderBottom: "none"}}>
             <Icon size={26}/>
         <div className={styles.label}>
             {label}
