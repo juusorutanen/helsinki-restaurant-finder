@@ -5,10 +5,17 @@
     grid-template-columns: repeat(4, minmax(0, 1fr)); 
     gap: 2rem;
 
-    @include ltSmall {
-      grid-template-columns: repeat(1, minmax(0, 1fr)); 
+  
+@include ltXlarge{
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+}
+@include ltMedium {
+  grid-template-columns: repeat(2, minmax(0, 1fr)); 
   }
-  }
+@include ltSmall {
+  grid-template-columns: repeat(1, minmax(0, 1fr)); 
+}
+}
 
   
 
