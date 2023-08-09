@@ -8,37 +8,59 @@ const SearchBar = () => {
   const router = useRouter();
   const params = useSearchParams();
   const [searchQuery, setSearchQuery] = useState<string | null>(
-    params ? params.get('desc') : ''
+    params ? params.get('search') || '' : ''
   );
-
+  
   const onSearch = useCallback(
     (event: React.FormEvent) => {
       event.preventDefault();
-
+  
       const updatedQuery: any = {
         ...(params ? qs.parse(params.toString()) : {}),
-        desc: searchQuery,
+        search: searchQuery,
       };
-
+  
       const url = qs.stringifyUrl(
         {
           url: '/',
-          query: updatedQuery,
+          query: updatedQuery, 
         },
         { skipNull: true }
       );
-
+  
       router.push(url);
     },
     [router, searchQuery, params]
   );
+
+  const onSearchQueryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newSearchQuery = event.target.value;
+    setSearchQuery(newSearchQuery);
+
+    const updatedQuery: any = {
+      ...(params ? qs.parse(params.toString()) : {}),
+      search: newSearchQuery || undefined,
+    };
+
+    const url = qs.stringifyUrl(
+      {
+        url: '/',
+        query: updatedQuery, 
+      },
+      { skipNull: true }
+    );
+
+    router.push(url);
+  };
+
+  
 
   return (
     <div className={styles.searchForm}>
       <form className={styles.form} onSubmit={onSearch}>
         <input
           value={searchQuery || ''}
-          onChange={(event) => setSearchQuery(event.target.value)}
+          onChange={onSearchQueryChange}
           className={styles.searchField}
           placeholder="Search for restaurants..."
           type="search"
@@ -52,3 +74,5 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
+
+
