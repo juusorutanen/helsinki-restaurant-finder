@@ -41,11 +41,25 @@
     overflow: hidden;
     right: 0; 
     top: 3rem; 
+
+    @include ltMedium {
+        right: -1rem; 
+        top: -1rem; 
+        border-radius: 0;
+        height: 80vh;
+        background-color: white;
+    }
 }
 
 .loginFlex {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    
+}
+
+.loginClose {
+    position: absolute;
+    color:black;
+    right: 0; 
+    top: 3rem; 
 }

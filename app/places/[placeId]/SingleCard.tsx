@@ -13,14 +13,10 @@ import { GrLocation} from 'react-icons/gr'
 
 interface SingleCardProps {
     data: Place;
-    onAction?: (id:string) => void;
-    disabled?: boolean;
     currentUser?: SafeUser | null;
 }
 const SingleCard: React.FC<SingleCardProps> =({
     data,
-    onAction,
-    disabled,
     currentUser
 }) => {
     return (

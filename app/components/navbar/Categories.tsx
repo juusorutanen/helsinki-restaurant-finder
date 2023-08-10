@@ -49,9 +49,6 @@ const Categories = () => {
     const category = params?.get('category')
     const pathname = usePathname();
 
-    
-
-
     return ( 
         <Container>
             <div className={styles.flexContainer}>

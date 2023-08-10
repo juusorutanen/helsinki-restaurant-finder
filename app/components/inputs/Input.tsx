@@ -3,9 +3,6 @@ import styles from '../../../styles/components/Input.module.scss'
 import { FieldValues,FieldErrors,UseFormRegister } from "react-hook-form";
 import classNames from 'classnames';
 
-
-
-
 interface InputProps {
     id:string;
     label:string;

@@ -2,7 +2,7 @@
 import styles from '../../../styles/components/UserMenu.module.scss'
 import Avatar from '../Avatar';
 import MenuItem from './MenuItem';
-import { AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { BiHeart } from 'react-icons/bi';
 import { useCallback, useState } from 'react';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
@@ -62,6 +62,9 @@ const UserMenu: React.FC<UserMenuProps> = ({
                     <MenuItem
                     onClick={() => signOut()}
                     label="Log out"/>
+                    <div className={styles.loginClose}>
+                        <AiOutlineClose onClick={toggleOpen} size={30}/>
+                    </div>
                     </>
 
                     ) : (

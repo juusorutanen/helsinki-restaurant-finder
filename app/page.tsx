@@ -5,7 +5,7 @@ import styles from '../styles/layout/Grid.module.scss'
 import EmptyState from './components/EmptyState';
 import PlaceCard from './components/places/PlaceCard';
 import PaginationBar from './components/PaginationBar';
-import prisma from '@/app/libs/prismadb';
+
 
 import getPlaces, { 
   IPlacesParams
@@ -19,8 +19,6 @@ interface HomeProps {
 const Home = async ({ searchParams}: HomeProps) => {
   const places = await getPlaces(searchParams);
   const currentUser = await getCurrentUser();
-
-  
   
   if (places.length === 0) {
     return (
@@ -43,7 +41,6 @@ const Home = async ({ searchParams}: HomeProps) => {
             )
           })}
         </div>
-        
       </Container>
     </ClientOnly>
   )

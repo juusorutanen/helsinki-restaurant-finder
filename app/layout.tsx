@@ -1,14 +1,18 @@
 import '../styles/main.scss'
 import Navbar from './components/navbar/Navbar';
 import ClientOnly from './components/ClientOnly';
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import RegisterModal from './components/modals/RegisterModal';
 import ToasterProvider from './providers/ToasterProvider';
 import LoginModal from './components/modals/LoginModal';
 import getCurrentUser from './actions/getCurrentUser';
+import Footer from './components/Footer';
 
 
-const font = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  weight: ['100', '300','400', '500','700'],
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: 'TasteOfHelsinki',
@@ -23,7 +27,7 @@ export default async function RootLayout({
   const currentUser = await getCurrentUser();
   return (
     <html lang="en">
-      <body className={font.className}>
+      <body className={roboto.className}>
       <ClientOnly>
         <ToasterProvider/>
         <LoginModal/>
@@ -33,6 +37,7 @@ export default async function RootLayout({
         <div className="childrenContainer">
           {children}
         </div>
+        <Footer/>
       </body>
     </html>
   )
