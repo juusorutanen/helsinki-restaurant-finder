@@ -1,0 +1,15 @@
+@use '../utils/' as *;
+
+
+.footer {
+    position: relative;
+    background: orange;
+    color: #231f20;
+    padding: 30px 0 0;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-top: 20px;
+}
