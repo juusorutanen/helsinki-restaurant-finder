@@ -24,7 +24,7 @@ const PlaceCard: React.FC<PlaceCardProps> =({
                         <Image
                         width={1000}
                         height={1000}
-                        className='nextimg'
+                        className={styles.nextimg}
                         alt="Restaurant"
                         src={data.picture_url || ''}
                         
@@ -44,7 +44,6 @@ const PlaceCard: React.FC<PlaceCardProps> =({
                             <a href={data.www || ''} target="_blank">Website</a>
                         </div>
                     </div>
-    
             </div>
       );
 }

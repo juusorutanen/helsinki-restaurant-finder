@@ -57,8 +57,12 @@ const UserMenu: React.FC<UserMenuProps> = ({
                     label={`Logged in as ${currentUser.name}`}
                     />
                     <MenuItem
-                    onClick={() => {}}
-                    label="My favorites"/>
+                    onClick={() => {
+                    router.push('/favorites');
+                    toggleOpen();
+                    }}
+                    label="My favorites"
+                     />
                     <MenuItem
                     onClick={() => signOut()}
                     label="Log out"/>

@@ -22,6 +22,7 @@ const PlacePage = async({ params}: { params: IPparams}) => {
         )
     }
     return (  
+        <div className={styles.pageContainer}>
         <ClientOnly>
             <SingleCard
             currentUser={currentUser}
@@ -29,6 +30,7 @@ const PlacePage = async({ params}: { params: IPparams}) => {
             data={place}
             />
         </ClientOnly>
+        </div>
     );
 }
  

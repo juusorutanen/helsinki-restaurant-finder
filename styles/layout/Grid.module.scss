@@ -3,7 +3,7 @@
 .gridMain {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr)); 
-    gap: 2rem;
+    gap: 1.5rem;
 
   
 @include ltXlarge{
@@ -22,12 +22,30 @@
   .gridSecondary {
     padding-top:1rem;
     display: grid;
+    
     grid-template-columns: repeat(4, minmax(0, 1fr)); 
-    gap: 2rem;
+    gap: 1.5rem;
 
     @include ltSmall {
       grid-template-columns: repeat(1, minmax(0, 1fr)); 
   }
+  }
+
+  .favoritesContainer {
+    margin-top:-11rem;
+    margin-bottom: 10rem;
+
+    @include ltMedium {
+      margin-top:-15rem;
+      
+    }
+    @include ltSmall {
+      margin-top:-16.5rem;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
   }
 
   

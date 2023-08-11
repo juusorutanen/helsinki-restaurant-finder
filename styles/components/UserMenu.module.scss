@@ -23,6 +23,7 @@
     display: none;
     @include ltMedium {
         display: flex;
+        z-index: 10;
     }
 }
 
@@ -43,11 +44,14 @@
     top: 3rem; 
 
     @include ltMedium {
-        right: -1rem; 
-        top: -1rem; 
+        z-index: 9;
+        width: 100%;
+        margin-top: 1rem;
+        position:fixed;
         border-radius: 0;
-        height: 80vh;
-        background-color: white;
+        height: 100vh;
+        background-color: black;
+        color:white;
     }
 }
 
@@ -60,6 +64,10 @@
 .loginClose {
     position: absolute;
     color:black;
-    right: 0; 
+    right: 2rem; 
     top: 3rem; 
+
+    @include gtMedium {
+        display:none;
+    }
 }

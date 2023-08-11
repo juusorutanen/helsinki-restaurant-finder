@@ -5,4 +5,9 @@
     padding-top: 1rem; 
     overflow-x: auto; 
     padding-bottom: 1rem;
+
+    @include ltMedium {
+        gap:1rem;
+        font-size: small;
+    }
 }

@@ -1,21 +1,48 @@
 @use '../utils/' as *;
 
-.header {
-   display: flex;
-   justify-content: space-between;
+.cardContainer {
+    flex-direction: column;
+    position: relative; 
+    margin-top: -11.3rem;
+
+    @include ltMedium {
+        margin-top: -14.6rem;
+    }
+    @include ltSmall {
+        margin-top: -16.9rem;
+    }
 }
 
-.cardContainer {
-    background-color: lightgreen;
+.infoContainer {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
     padding: 10px;
-    border-radius: 10px;
+    padding-top: 5px; 
+    width: 100%;
+}
+
+.imageContainer {
+    width: 100%;
+    background-color: white;
+}
+
+.nextimg {
+    max-height: 43.75vw;
+    height: 630px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .favorites {
     display: flex;
     gap: 2rem;
 }
-
 
 .locationHeader {
     font-weight: 200;

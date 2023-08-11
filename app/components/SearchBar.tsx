@@ -3,6 +3,7 @@ import qs from 'query-string';
 import { useCallback, useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import styles from '../../styles/components/SearchInput.module.scss';
+import Container from './Container';
 
 const SearchBar = () => {
   const router = useRouter();
@@ -56,6 +57,7 @@ const SearchBar = () => {
   
 
   return (
+    <Container>
     <div className={styles.searchForm}>
       <form className={styles.form} onSubmit={onSearch}>
         <input
@@ -70,6 +72,7 @@ const SearchBar = () => {
         </button>
       </form>
     </div>
+    </Container>
   );
 };
 

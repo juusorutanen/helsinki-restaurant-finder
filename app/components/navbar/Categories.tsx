@@ -4,7 +4,7 @@ import Container from '../Container';
 import CategoryBox from '../CategoryBox';
 import { FaPizzaSlice, FaHamburger} from 'react-icons/fa';
 import { GiTacos, GiNoodles,GiSteak,GiDonerKebab,GiSandwich} from 'react-icons/gi'
-import { LuVegan } from 'react-icons/lu'
+import { LuVegan,LuSalad } from 'react-icons/lu'
 import { useSearchParams, usePathname } from 'next/navigation';
 
 
@@ -40,6 +40,10 @@ export const categories = [
     {
         label: 'Vegan',
         icon: LuVegan,
+    },
+    {
+        label: 'Vegetarian',
+        icon: LuSalad,
     }
 ]
 

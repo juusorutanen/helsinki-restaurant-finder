@@ -6,6 +6,7 @@ import Categories from './Categories';
 import Image from '../navbar/Logo';
 import { SafeUser } from '@/app/types';
 import SearchBar from '../SearchBar';
+import HeroText from '../HeroText';
 import { useState,useEffect } from 'react';
 
 interface NavbarProps {
@@ -44,10 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 </div>
             </Container>
             </div>
-            <div className={styles.heroText}>
-                <h1>Find your <span>favorite</span> restaurants from Helsinki</h1>
-                <h2>All in one place</h2>
-            </div>
+            <HeroText/>
             <SearchBar/>
             <Categories/>
         </div>

@@ -1,2 +1,5 @@
 @use '../utils/' as *;
 
+.pageContainer {
+    min-height: 100vh;
+}

@@ -72,9 +72,13 @@ figcaption p{
 }
 
 .childrenContainer {
-    padding-top: 26rem; 
-    background-image: url("../../public/images/strokeorangebg.svg");
-    background-repeat: no-repeat;
-    background-image: cover;
+    padding-top: 25rem; 
+
+    @include ltMedium {
+        padding-top: 28rem; 
+    }
+    @include ltSmall{
+        padding-top: 30rem; 
+    }
 }
 
