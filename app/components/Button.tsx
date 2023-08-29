@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
         [styles.disabled]: disabled,
         [styles.outline]: outline,
         [styles.small]: small,
-        [outline ? styles.bgWhite : styles.bgRose500]: true,
+        [outline ? styles.bgWhite : styles.bgGreen]: true,
         [outline ? styles.borderBlack : styles.borderRose500]: true,
         [outline ? styles.textBlack : styles.textWhite]: true,
         [small ? styles.textSm : styles.textMd]: true,

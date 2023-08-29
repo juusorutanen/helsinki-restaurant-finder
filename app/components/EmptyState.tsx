@@ -12,7 +12,7 @@ interface EmptyState {
 
 const EmptyState:React.FC<EmptyState> = ({
     title = "No exact matches",
-    subtitle = "Try changing your filters",
+    subtitle = "Try changing your search words",
     showReset
 }) => {
     const router = useRouter();
@@ -24,8 +24,9 @@ const EmptyState:React.FC<EmptyState> = ({
                 {showReset && (
                     <Button
                     outline
-                    label="Remove all filters"
-                    onClick={() => router.push('/')}
+                    label="Go back"
+                    onClick={() => router.push('/')
+                }
                     />
                 )}
             </div>

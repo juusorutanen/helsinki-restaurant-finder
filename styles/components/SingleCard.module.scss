@@ -3,23 +3,26 @@
 .cardContainer {
     flex-direction: column;
     position: relative; 
-    margin-top: -11.3rem;
+    margin-top: -10.3rem;
+
 
     @include ltMedium {
-        margin-top: -14.6rem;
+        margin-top: -6.6rem;
     }
     @include ltSmall {
-        margin-top: -16.9rem;
+        margin-top: -8.3rem;
     }
 }
 
 .infoContainer {
-    background-color: white;
     display: flex;
     justify-content: space-between;
     padding: 10px;
     padding-top: 5px; 
     width: 100%;
+    @include ltSmall {
+        flex-direction: column;
+    }
 }
 
 .imageContainer {
@@ -41,12 +44,15 @@
 
 .favorites {
     display: flex;
+    align-items: center;
     gap: 2rem;
+    width: 200px;
 }
 
 .locationHeader {
     font-weight: 200;
     display: flex;
+    gap:0.35rem;
     align-items: center;
 }
 
@@ -54,10 +60,27 @@
     width: 70%;
 }
 
+.contactInfo {
+    font-weight: 500;
+}
+
+.infoColumn {
+    gap:0.85rem;
+    display: flex;
+    flex-direction: column;
+}
+
 .url {
-    background-color: white;
+    justify-content: center;
+    gap: 2px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
     padding: 10px;
-    border-radius: 20px;
-    width: 30%;
-    text-align: center;
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+    
 }

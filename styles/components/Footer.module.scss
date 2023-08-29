@@ -4,11 +4,13 @@
 .footer {
     position: relative;
     bottom: 0;
-    background: orange;
+    background: $color-secondary;
     color: #231f20;
+    font-weight: 600;
     padding: 30px 0 0;
     display: flex;
     justify-content: center;
+    margin-top: 1.5rem;
     align-items: center;
     height: 200px;
     width: 100%; 

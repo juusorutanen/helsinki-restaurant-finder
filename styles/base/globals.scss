@@ -30,9 +30,9 @@ h4 {
 p {
     margin: 0 0 $baseline;
     max-width: 30em;
-    word-wrap: break-word; //legacy
+    word-wrap: break-word; 
 
-    /* Non standard for webkit */
+    
     word-break: break-word;
     overflow-wrap: break-word;
     -ms-hyphenate-limit-lines: 1;
@@ -48,7 +48,6 @@ a {
     text-decoration: none;
 }
 
-//medium style links
 p a {
     background-image: linear-gradient(to bottom, transparent 50%, currentcolor 50%);
     background-repeat: repeat-x;
@@ -72,13 +71,13 @@ figcaption p{
 }
 
 .childrenContainer {
-    padding-top: 25rem; 
+    padding-top: 26rem; 
 
     @include ltMedium {
-        padding-top: 28rem; 
+        padding-top: 21rem; 
     }
     @include ltSmall{
-        padding-top: 30rem; 
+        padding-top: 22.5rem; 
     }
 }
 

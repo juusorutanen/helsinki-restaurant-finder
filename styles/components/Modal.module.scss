@@ -34,10 +34,15 @@
     position: relative;
     border-radius: 0.5rem;
     transform: translate(0);
-    background-color: #fff;    
+    background-color: $color-primary;   
     height: 100%;
     width: 100%;
     outline:none;
+
+    @include ltSmall {
+        height: 100vh;
+        border-radius: 0;
+    }
 }
 
 .header {
@@ -46,6 +51,7 @@
     justify-content: center;
     position:relative;
     border-bottom-width: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.269);
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     padding: 1.5rem;
@@ -65,6 +71,10 @@
     position:relative;
     padding: 1.5rem; 
     flex: 1 1 auto; 
+
+    @include ltSmall {
+        flex:0;
+    }
 }
 
 .modalFooter {

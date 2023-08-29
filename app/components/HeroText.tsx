@@ -1,7 +1,5 @@
 'use client';
 
-
-import { useRouter } from "next/navigation";
 import styles from '../../styles/components/Navbar.module.scss';
 import { usePathname } from "next/navigation";
 

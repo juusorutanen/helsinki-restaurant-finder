@@ -61,7 +61,7 @@ const RegisterModal  = () => {
     const bodyContent = (
         <div className={styles.flexContainer}>
             <Logo/>
-            <Heading title="Welcome to Taste Of Helsinki"
+            <Heading title="Welcome to Helsinki Restaurant Finder"
             subtitle="Create an account to add favorites"
             />
             <Input 
@@ -95,7 +95,7 @@ const RegisterModal  = () => {
     const footerContent = (
         <div className={styles.footerContent}>
             <Button
-            outline
+             outline
             label="Continue with Google"
             icon={FcGoogle}
             onClick={()=> signIn('google')}
@@ -127,7 +127,7 @@ const RegisterModal  = () => {
         disabled={isLoading}
         isOpen={registerModal.isOpen}
         title="Register"
-        actionLabel="Continue"
+        actionLabel="Continue with email"
         onClose={registerModal.onClose}
         onSubmit={handleSubmit(onSubmit)}
         body={bodyContent}

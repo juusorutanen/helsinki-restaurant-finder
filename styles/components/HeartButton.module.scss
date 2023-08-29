@@ -3,11 +3,16 @@
 
 .heart {
     position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
     cursor: pointer;
   }
 
   .heartIcons {
     position: absolute;
-    top: 2px;
-    right: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }

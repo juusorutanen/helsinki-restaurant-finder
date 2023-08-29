@@ -8,6 +8,10 @@
     border-radius: 0.5rem;
     transition: all 0.3s ease;
     width: 100%;
+    padding-top: 0.75rem; 
+    padding-bottom: 0.75rem; 
+    font-size: 1rem; 
+    font-weight: 600;
   
     &.disabled {
       opacity: 0.7;
@@ -28,7 +32,7 @@
       }
     }
   
-    &.bgRose500 {
+    &.bgGreen {
       background-color: $color-green-primary;
     }
   
@@ -38,32 +42,6 @@
   
     &.textWhite {
       color: white;
-    }
-  
-    &.textSm {
-      font-size: 0.875rem; 
-    }
-  
-    &.textMd {
-      font-size: 1rem; 
-    }
-  
-    &.py1 {
-      padding-top: 0.25rem; 
-      padding-bottom: 0.25rem; 
-    }
-  
-    &.py3 {
-      padding-top: 0.75rem; 
-      padding-bottom: 0.75rem; 
-    }
-  
-    &.fontLight {
-      font-weight: 300; 
-    }
-  
-    &.fontSemibold {
-      font-weight: 600;
     }
   
     &.border1px {
@@ -81,10 +59,7 @@
     &.left4 {
       left: 1rem;
     }
-  
-    &.top3 {
-      top: 0.75rem;
-    }
+
   }
 
   
@@ -92,7 +67,7 @@
     .icon {
         position: absolute;
         left: 1rem;
-        top: 0.75rem;
+        top: 0.65rem;
     }
 
   

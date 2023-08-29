@@ -24,16 +24,10 @@ const Input: React.FC<InputProps> = ({
 
 }) => {
 
-    const inputClasses = classNames(styles.inputClass, {
-        [styles.errors]: errors,
-        [errors[id] ? styles.errorBorderRose : styles.errorBorderNeutral]: true,
-        [errors[id] ? styles.errorFocusRose : styles.errorFocusBlack]: true,
-      });
-
-      const labelClasses = classNames(styles.label, {
-        [styles.errors]: errors,
-        [errors[id] ? styles.labelErrorTextColor : styles.labelTextColor]: true,
-      });
+  const inputClasses = classNames({
+    [styles.inputClass]: true,
+    [styles.errorBorderRed]: errors[id],
+  });
 
     return ( 
         <div className={styles.relativeContainer}>
@@ -46,7 +40,7 @@ const Input: React.FC<InputProps> = ({
            className={inputClasses}
            />
            <label 
-            className={labelClasses}>
+            className= {styles.label}>
             {label}
          </label>
         </div>

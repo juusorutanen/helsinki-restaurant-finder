@@ -3,6 +3,7 @@
 .navbar {
     color: white;
     position: fixed;
+    top:0;
     width: 100%;
     z-index: 10; 
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../../public/images/foodbackground.jpg");
@@ -41,8 +42,15 @@
 
     @include ltMedium {
     white-space:normal;
+    padding: 1rem;
     h1,h2 {
         line-height: 1.0;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
     }
      
     }

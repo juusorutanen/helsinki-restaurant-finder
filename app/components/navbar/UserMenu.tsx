@@ -36,7 +36,8 @@ const UserMenu: React.FC<UserMenuProps> = ({
         <div className={styles.relativeContainer}>
             <div className={styles.flexContainer}>
                 <div className={styles.userMenuButtons}>
-                <div onClick={() => router.push('/favorites')}className={styles.favorites}>
+                <div onClick={() => currentUser ? router.push('/favorites') : loginModal.onOpen()}
+                className={styles.favorites}>
                     <BiHeart size={30} />Favorites
                 </div>
                 <div className={styles.menu}>
@@ -74,11 +75,17 @@ const UserMenu: React.FC<UserMenuProps> = ({
                     ) : (
                     <>
                     <MenuItem
-                    onClick={loginModal.onOpen}
+                    onClick={() => {
+                    loginModal.onOpen();
+                    toggleOpen();
+                    }}
                     label="Login"
                     />
                     <MenuItem
-                    onClick={registerModal.onOpen}
+                    onClick={() => {
+                    registerModal.onOpen();
+                    toggleOpen();
+                      }}
                     label="Sign up"
                     />
                     </>
