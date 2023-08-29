@@ -21,7 +21,6 @@ const LoginModal  = () => {
     const registerModal = useRegisterModal();
     const loginModal = useLoginModal();
     const [isLoading,setIsLoading] = useState(false);
-
     const {
         register,
         reset,
@@ -106,7 +105,7 @@ const LoginModal  = () => {
             <div className={styles.accountContainer}>
                 <div className={styles.accountFlex}>
                     <div>
-                    Don't have an account yet?
+                    Don&apos;t have an account yet?
                     </div>
                     <div className={styles.footerLogin}
                     onClick={toggle}>
