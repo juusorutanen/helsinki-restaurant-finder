@@ -62,7 +62,7 @@ const RegisterModal  = () => {
     const bodyContent = (
         <div className={styles.flexContainer}>
             <Logo/>
-            <Heading title="Welcome to Helsinki Restaurant Finder"
+            <Heading title="Welcome!"
             subtitle="Create an account to add favorites"
             />
             <Input 
