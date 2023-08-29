@@ -1,4 +1,4 @@
-
+export const dynamic = 'force-dynamic'
 import ClientOnly from './components/ClientOnly';
 import Container from './components/Container';
 import styles from '../styles/layout/Grid.module.scss'
@@ -10,6 +10,8 @@ import getPlaces, {
   IPlacesParams
 } from "@/app/actions/getPlaces";
 import getCurrentUser from "@/app/actions/getCurrentUser";
+
+
 
 interface HomeProps {
   searchParams: IPlacesParams
