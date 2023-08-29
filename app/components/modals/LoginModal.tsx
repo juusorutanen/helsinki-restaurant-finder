@@ -64,7 +64,6 @@ const LoginModal  = () => {
 
     const bodyContent = (
         <div className={styles.flexContainer}>
-            <Logo/>
             <Heading title="Welcome back!"
             subtitle="Login to your account"
             />
