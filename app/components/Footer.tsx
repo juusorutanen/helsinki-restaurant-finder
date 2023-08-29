@@ -1,15 +1,18 @@
 'use client';
 
 
-import { useRouter } from "next/navigation";
 import styles from '../../styles/components/Footer.module.scss';
+import ClientOnly from './ClientOnly';
+
 
 
 const Footer = () => {
     return (
+        <ClientOnly>
         <div className={styles.footer}>
-            <p>2023 Helsinki Restaurant Finder | All Rights Reserved</p>
+            <p>2023 Helsinki Restaurant Finder</p>
         </div>
+        </ClientOnly>
     )
 
 }

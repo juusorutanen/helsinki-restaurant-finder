@@ -83,7 +83,7 @@ const Modal: React.FC<ModalProps> = ({
                     {/* Header */}
                     <div className={styles.header}>
                         <button onClick={handleClose}className={styles.closeButton}>
-                            <IoMdClose size = {18}/>
+                            <IoMdClose size = {23}/>
                         </button>
                         <div className={styles.modalTitle}>
                             {title}

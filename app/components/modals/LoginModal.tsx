@@ -1,6 +1,5 @@
 'use client';
 import { signIn } from 'next-auth/react';
-import axios from 'axios';
 import styles from '../../../styles/components/RegisterModal.module.scss'
 import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle} from 'react-icons/fc';
@@ -17,9 +16,6 @@ import Logo from '../navbar/Logo';
 import { useRouter } from 'next/navigation';
 
 
-
-
-
 const LoginModal  = () => {
     const router = useRouter();
     const registerModal = useRegisterModal();
@@ -28,6 +24,7 @@ const LoginModal  = () => {
 
     const {
         register,
+        reset,
         handleSubmit,
         formState: {
             errors,
@@ -96,20 +93,20 @@ const LoginModal  = () => {
         <div className={styles.footerContent}>
             <Button
             outline
-            label="Continue with Google"
+            label="Login with Google"
             icon={FcGoogle}
             onClick={()=> signIn('google')}
             />
              <Button
             outline
-            label="Continue with Github"
+            label="Login with Github"
             icon={AiFillGithub}
             onClick={()=> signIn('github')}
             />
             <div className={styles.accountContainer}>
                 <div className={styles.accountFlex}>
                     <div>
-                    Don't have an account?
+                    Don't have an account yet?
                     </div>
                     <div className={styles.footerLogin}
                     onClick={toggle}>
@@ -127,8 +124,8 @@ const LoginModal  = () => {
         disabled={isLoading}
         isOpen={loginModal.isOpen}
         title="Login"
-        actionLabel="Continue with email"
-        onClose={loginModal.onClose}
+        actionLabel="Login"
+        onClose={()=> {loginModal.onClose(); reset();}}
         onSubmit={handleSubmit(onSubmit)}
         body={bodyContent}
         footer={footerContent}
@@ -136,4 +133,4 @@ const LoginModal  = () => {
       );
 }
  
-export default LoginModal ;
+export default LoginModal;

@@ -4,6 +4,7 @@
 .button {
     position: relative;
     opacity: 1;
+    border: 2px solid rgba(0, 0, 0, 0.084);
     cursor: pointer;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
@@ -36,33 +37,14 @@
       background-color: $color-green-primary;
     }
   
-    &.borderRose500 {
+    &.borderNone {
       border-color: none;
     }
   
     &.textWhite {
       color: white;
     }
-  
-    &.border1px {
-      border-width: 1px; 
-    }
-  
-    &.border2 {
-      border-width: 2px; 
-    }
-  
-    &.absolute {
-      position: absolute;
-    }
-  
-    &.left4 {
-      left: 1rem;
-    }
-
   }
-
-  
 
     .icon {
         position: absolute;

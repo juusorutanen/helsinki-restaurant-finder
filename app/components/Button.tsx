@@ -18,21 +18,15 @@ const Button: React.FC<ButtonProps> = ({
     onClick,
     disabled,
     outline,
-    small,
     icon:Icon,
 }) => {
 
     const buttonClasses = classNames(styles.button, {
         [styles.disabled]: disabled,
         [styles.outline]: outline,
-        [styles.small]: small,
         [outline ? styles.bgWhite : styles.bgGreen]: true,
-        [outline ? styles.borderBlack : styles.borderRose500]: true,
+        [outline ? styles.borderBlack : styles.borderNone]: true,
         [outline ? styles.textBlack : styles.textWhite]: true,
-        [small ? styles.textSm : styles.textMd]: true,
-        [small ? styles.py1 : styles.py3]: true,
-        [small ? styles.fontLight : styles.fontSemibold]: true,
-        [small ? styles.border1px : styles.border2]: true,
       });
     
       

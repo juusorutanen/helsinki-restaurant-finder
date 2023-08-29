@@ -27,6 +27,7 @@ const RegisterModal  = () => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: {
             errors,
         }
@@ -128,7 +129,7 @@ const RegisterModal  = () => {
         isOpen={registerModal.isOpen}
         title="Register"
         actionLabel="Continue with email"
-        onClose={registerModal.onClose}
+        onClose={()=> {registerModal.onClose(); reset();}}
         onSubmit={handleSubmit(onSubmit)}
         body={bodyContent}
         footer={footerContent}
