@@ -46,7 +46,7 @@ const SingleCard: React.FC<SingleCardProps> =({
                     </div>
                     <div className={styles.infoColumn}>
                         <div className={styles.url}>
-                            <a href={data.www || ''}><TbWorld size={30}/>Website</a>
+                            <a href={data.www || ''} target="_blank"><TbWorld size={30}/>Website</a>
                         </div>
                         <div onClick={toggleFavorite} className={styles.favorites}>
                         {hasFavorited ? 'Remove from favorites' : 'Add to favorites'}
