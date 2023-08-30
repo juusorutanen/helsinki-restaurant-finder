@@ -16,10 +16,7 @@
 .relative {
     position: relative;
     width: 100%;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem; 
-    margin-left: auto;
-    margin-right: auto; 
+    margin: 1.5rem auto;
     height: auto; 
 
     @include gtMedium {
@@ -27,7 +24,6 @@
     }
     @include ltSmall {
         flex:none;
-        margin:0;
     }
 }
 
@@ -43,7 +39,7 @@
     outline:none;
 
     @include ltSmall {
-        height: 100vh;
+        height: 95vh;
         border-radius: 0;
     }
 }
