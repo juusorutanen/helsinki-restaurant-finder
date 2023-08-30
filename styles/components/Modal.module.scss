@@ -25,6 +25,10 @@
     @include gtMedium {
         width: 50%;
     }
+    @include ltSmall {
+        flex:none;
+        margin:0;
+    }
 }
 
 .content {
@@ -51,9 +55,6 @@
     position:relative;
     border-bottom: 1px solid rgba(0, 0, 0, 0.269);
     padding: 1.0rem;
-    @include ltSmall {
-        margin-top: 8px;
-    }
 }
 
 .closeButton {
@@ -72,7 +73,7 @@
     flex: 1 1 auto; 
 
     @include ltSmall {
-        flex:0;
+        flex:none;
     }
 }
 
