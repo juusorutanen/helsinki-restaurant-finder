@@ -6,10 +6,7 @@
     top:0;
     width: 100%;
     z-index: 10; 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../../public/images/foodbackground.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../public/images/foodbackground.jpg") center/cover no-repeat;
     transition-timing-function: ease-in;
     transition:0.5s;
 
