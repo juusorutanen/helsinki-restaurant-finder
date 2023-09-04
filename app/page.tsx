@@ -15,7 +15,7 @@ interface HomeProps {
 
 const Home = async ({ searchParams }: HomeProps) => {
   const currentPage = parseInt(searchParams.page || "1");
-  const pageSize = 20;
+  const pageSize = 28;
 
   const places = await getPlaces(searchParams);
   const currentUser = await getCurrentUser();
