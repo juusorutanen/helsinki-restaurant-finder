@@ -8,11 +8,6 @@ import Container from './Container';
 
 const SearchBar = () => {
   const router = useRouter();
-  const pathname = usePathname();
-  const isFavoritesPage = pathname === '/favorites';
-    if (isFavoritesPage) {
-        return null;
-    }
   const params = useSearchParams();
   const [searchQuery, setSearchQuery] = useState<string | null>(
     params ? params.get('search') || '' : ''
