@@ -21,22 +21,23 @@
     }
   }
   
-  .join-item {
+  .joinItem {
     display: flex;
     padding: 5px 10px;
-    background-color: #eee;
+    background-color: $color-secondary;
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    color: #333;
+    color: $color-orange;
     @include ltSmall {
     padding: 4px 10px;
     }
   }
   
   .join-item.btn-active {
-    background-color: #ccc;
+    background-color: $color-orange;
+    border-radius: 5px;
     pointer-events: none;
   }
   
