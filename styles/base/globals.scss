@@ -71,13 +71,6 @@ figcaption p{
 }
 
 .childrenContainer {
-    padding-top: 25rem; 
-
-    @include ltMedium {
-        padding-top: 20rem; 
-    }
-    @include ltSmall{
-        padding-top: 21.5rem; 
-    }
+   padding-top: 1rem;
 }
 

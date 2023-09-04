@@ -2,11 +2,8 @@
 import styles from '../../../styles/components/Navbar.module.scss'
 import Container from '../Container';
 import UserMenu from './UserMenu';
-import Categories from './Categories';
 import Image from '../navbar/Logo';
 import { SafeUser } from '@/app/types';
-import SearchBar from '../SearchBar';
-import HeroText from '../HeroText';
 import { useState,useEffect } from 'react';
 
 interface NavbarProps {
@@ -36,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({
     }, [])
 
     return (
-        <div className={`${styles.navbar} ${show ? styles.show : ''}`}>
+        <div className={`${styles.navbar} ${!show ? styles.show : ''}`}>
             <div className={styles.navbarBorder}>
             <Container>
                 <div className={styles.navbarContainer}>
@@ -45,9 +42,6 @@ const Navbar: React.FC<NavbarProps> = ({
                 </div>
             </Container>
             </div>
-            <HeroText/>
-            <SearchBar/>
-            <Categories/>
         </div>
     )
 }

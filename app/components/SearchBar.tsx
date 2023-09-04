@@ -1,4 +1,5 @@
-import { useRouter, useSearchParams } from 'next/navigation';
+'use client'
+import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import qs from 'query-string';
 import { useCallback, useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
@@ -7,6 +8,11 @@ import Container from './Container';
 
 const SearchBar = () => {
   const router = useRouter();
+  const pathname = usePathname();
+  const isFavoritesPage = pathname === '/favorites';
+    if (isFavoritesPage) {
+        return null;
+    }
   const params = useSearchParams();
   const [searchQuery, setSearchQuery] = useState<string | null>(
     params ? params.get('search') || '' : ''

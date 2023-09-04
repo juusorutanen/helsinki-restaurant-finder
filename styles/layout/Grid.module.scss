@@ -32,16 +32,8 @@
   }
 
   .favoritesContainer {
-    margin-top:-11rem;
+    margin-top:4rem;
     margin-bottom: 10rem;
-
-    @include ltMedium {
-      margin-top:-7rem;
-      
-    }
-    @include ltSmall {
-      margin-top:-8.5rem;
-    }
 
     h1 {
       margin-bottom: 1rem;

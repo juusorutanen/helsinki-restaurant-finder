@@ -1,0 +1,59 @@
+@use "../utils/" as *;
+
+
+.heroImage {
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../public/images/foodbackground.jpg");
+height: 350px;
+background-color: black;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+margin-top: 70px;
+width: 100%;
+display: flex;
+flex-direction: column;
+
+@include ltMedium {
+    height: 300px;
+}
+}
+.heroText {
+    color:white;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    padding: 3rem;
+    span {
+        color:orange;
+    }
+
+    h2 {
+        font-weight: 200;
+    }
+    h1 {
+        line-height: 0.1;
+    }
+
+    @include ltMedium {
+    white-space:normal;
+    padding: 1rem;
+    h1,h2 {
+        line-height: 1.0;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+     
+    }
+}
+
+.container {
+    width: 100%;
+}

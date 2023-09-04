@@ -3,59 +3,23 @@
 .navbar {
     color: white;
     position: fixed;
+    display: flex;
+    align-items: center;
     top:0;
+    height: 70px;
     width: 100%;
     z-index: 10; 
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../public/images/foodbackground.jpg") center/cover no-repeat;
+    background-color: #191716;
     transition-timing-function: ease-in;
     transition:0.5s;
 
     &.show {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      opacity: 0;
-      transform: translateY(-100%);
-    
-.heroText {
-    color:white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    white-space: nowrap;
-    padding: 3rem;
-    span {
-        color:orange;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); 
     }
-
-    h2 {
-        font-weight: 200;
-    }
-    h1 {
-        line-height: 0.1;
-    }
-
-    @include ltMedium {
-    white-space:normal;
-    padding: 1rem;
-    h1,h2 {
-        line-height: 1.0;
-    }
-    h1 {
-        font-size: 1.5rem;
-    }
-    h2 {
-        font-size: 1.2rem;
-    }
-     
-    }
-}
 }
 
 .navbarBorder {
-    padding-bottom: 1rem;
+    width: 100%;
 }
 
 
@@ -64,8 +28,6 @@
     align-items: center;
     justify-content:space-between;
     gap: 0.75rem; 
-    margin-top: 0.75rem;
-    margin-left: 0.75rem;
 }
 
 
@@ -73,6 +35,10 @@
     width: auto;
     height: auto;
     cursor: pointer;
+
+    @include ltSmall {
+        width: 150px;
+    }
 }
 
 

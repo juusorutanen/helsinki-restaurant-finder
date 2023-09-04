@@ -7,6 +7,9 @@ import ToasterProvider from './providers/ToasterProvider';
 import LoginModal from './components/modals/LoginModal';
 import getCurrentUser from './actions/getCurrentUser';
 import Footer from './components/Footer';
+import SearchBar from './components/SearchBar';
+import Categories from './components/navbar/Categories';
+import Header from './components/Header';
 
 
 const roboto = Roboto({
@@ -35,6 +38,7 @@ export default async function RootLayout({
         <LoginModal/>
         <RegisterModal/>
         <Navbar currentUser={currentUser}/>
+        <Header/>
       </ClientOnly>
         <div className="childrenContainer">
           {children}

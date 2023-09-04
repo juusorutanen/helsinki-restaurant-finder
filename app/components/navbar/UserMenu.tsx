@@ -67,9 +67,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                     <MenuItem
                     onClick={() => signOut()}
                     label="Log out"/>
-                    <div className={styles.loginClose}>
-                        <AiOutlineClose onClick={toggleOpen} size={30}/>
-                    </div>
+                    
                     </>
 
                     ) : (

@@ -53,6 +53,12 @@ const Categories = () => {
     const category = params?.get('category')
     const pathname = usePathname();
 
+    const isFavoritesPage = pathname === '/favorites';
+
+    if (isFavoritesPage) {
+        return null;
+    }
+
     return ( 
         <Container>
             <div className={styles.flexContainer}>

@@ -3,15 +3,7 @@
 .cardContainer {
     flex-direction: column;
     position: relative; 
-    margin-top: -10.3rem;
-
-
-    @include ltMedium {
-        margin-top: -6.6rem;
-    }
-    @include ltSmall {
-        margin-top: -8.3rem;
-    }
+    margin-top: 4.5rem;
 }
 
 .infoContainer {
