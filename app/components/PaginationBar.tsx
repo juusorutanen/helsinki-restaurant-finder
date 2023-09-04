@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "../../styles/components/PaginationBar.module.scss";
+import Container from "./Container";
 
 interface PaginationBarProps {
   currentPage: number;
@@ -10,7 +11,7 @@ export default function PaginationBar({
   currentPage,
   totalPages,
 }: PaginationBarProps) {
-  const maxPage = Math.min(totalPages, Math.max(currentPage + 4, 10));
+  const maxPage = Math.min(totalPages, Math.max(currentPage + 4, 5));
   const minPage = Math.max(1, Math.min(currentPage - 5, maxPage - 9));
 
   const numberedPageItems: JSX.Element[] = [];
@@ -59,7 +60,6 @@ export default function PaginationBar({
     )}
   </div>
 </div>
-
     </>
   );
 }
