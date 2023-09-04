@@ -3,7 +3,7 @@
 
 .heroImage {
 background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../public/images/foodbackground.jpg");
-height: 350px;
+height: 320px;
 background-color: black;
 background-position: center;
 background-repeat: no-repeat;
@@ -15,8 +15,16 @@ display: flex;
 flex-direction: column;
 
 @include ltMedium {
-    height: 300px;
+    height: 233px;
 }
+
+@include ltSmall {
+    height: 263px;
+}
+
+
+
+
 }
 .heroText {
     color:white;
@@ -49,6 +57,7 @@ flex-direction: column;
     }
     h2 {
         font-size: 1.2rem;
+        line-height: 0.1rem;
     }
      
     }
