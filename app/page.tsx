@@ -23,11 +23,9 @@ const Home = async ({ searchParams }: HomeProps) => {
   const totalItemCount = places.length;
   const totalPages = Math.ceil(totalItemCount / pageSize);
 
-  // Calculate the start and end indices for pagination
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
 
-  // Get the paginated subset of places
   const paginatedPlaces = places.slice(startIndex, endIndex);
 
   if (places.length === 0) {
