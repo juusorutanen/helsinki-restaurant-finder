@@ -11,7 +11,7 @@ export default async function getPlaces(
   try {
     const {
       search,
-      category
+      category,
     } = params;
 
     let where: any = {};
@@ -50,8 +50,7 @@ export default async function getPlaces(
       where: where,
       orderBy: {
         name: 'desc', 
-      },
-      take: 100, 
+      }
     });
 
     return places;
