@@ -49,7 +49,7 @@ export default async function getPlaces(
     const places = await prisma.place.findMany({
       where: where,
       orderBy: {
-        name: 'desc', 
+        name: 'asc', 
       }
     });
 
