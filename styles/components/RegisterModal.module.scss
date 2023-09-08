@@ -25,6 +25,9 @@
     @include flexCenter();
     gap:0.5rem;
     
+    div {
+        color: #fff;
+    }
 }
 
 .footerLogin {

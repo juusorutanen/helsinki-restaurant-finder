@@ -33,7 +33,9 @@
     position: relative;
     border-radius: 0.5rem;
     transform: translate(0);
-    background-color: $color-primary;   
+    background-color: #43484973;
+    backdrop-filter: blur(0.75rem);
+    color: #fff;  
     height: 100%;
     width: 100%;
     outline:none;
@@ -55,6 +57,7 @@
 
 .closeButton {
     padding: 0.25rem; 
+    color: #fff;
     cursor: pointer;
     border:none;
     transform: translate(0);
@@ -76,7 +79,6 @@
 .modalFooter {
     display: flex;
     flex-direction: column;
-    background-color: $color-primary;  
     gap: 0.5rem;
     border-radius: 10px;
     padding: 1.5rem; 
