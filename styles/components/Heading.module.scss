@@ -5,7 +5,7 @@
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 2rem; 
-    color: $color-secondary-yellow;
+    color: $color-orange;
 
     @include ltSmall {
         font-size: 1.2rem;
@@ -13,7 +13,7 @@
 }
 
 .subtitle {
-    color: $color-text-primary;
+    color: #b46409;
     font-weight: 300;
     @include ltSmall {
         font-size: 1.0rem;
