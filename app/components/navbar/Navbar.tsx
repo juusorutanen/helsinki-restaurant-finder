@@ -12,8 +12,6 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({
     currentUser
-
-    
 }) => {
 
     const [show, setShow] = useState(true)

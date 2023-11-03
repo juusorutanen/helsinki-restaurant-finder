@@ -7,8 +7,6 @@ import ToasterProvider from './providers/ToasterProvider';
 import LoginModal from './components/modals/LoginModal';
 import getCurrentUser from './actions/getCurrentUser';
 import Footer from './components/Footer';
-import SearchBar from './components/SearchBar';
-import Categories from './components/navbar/Categories';
 import Header from './components/Header';
 
 
