@@ -7,7 +7,7 @@ import { SafeUser } from '@/app/types';
 import { useState,useEffect } from 'react';
 
 interface NavbarProps {
-    currentUser?: SafeUser | null;
+currentUser?: SafeUser | null;
 }
 
 const Navbar: React.FC<NavbarProps> = ({

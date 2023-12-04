@@ -5,7 +5,6 @@ import styles from '../styles/layout/Grid.module.scss';
 import EmptyState from './components/EmptyState';
 import PlaceCard from './components/places/PlaceCard';
 import PaginationBar from './components/PaginationBar';
-
 import getPlaces, { IPlacesParams } from "@/app/actions/getPlaces";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 
