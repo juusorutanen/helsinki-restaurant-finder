@@ -4,7 +4,7 @@ import { PuffLoader } from "react-spinners";
 
 const Loader = () => {
   return ( 
-    <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}
+    <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginBottom:"2000px",marginTop:"100px"}}
     >
       <PuffLoader
         size={200}
