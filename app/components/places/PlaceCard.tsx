@@ -22,12 +22,12 @@ const PlaceCard: React.FC<PlaceCardProps> =({
                 <div className={styles.card}>
                     <div className={styles.cardImageContainer} onClick={() => router.push(`/places/${data.id}`)}>
                         <Image
-                        width={1000}
-                        height={1000}
+                        width={500}
+                        height={500}
                         className={styles.nextimg}
-                        alt="Restaurant"
+                        alt={data.name || 'restaurant'}
                         src={data.picture_url || ''}
-                        priority
+                        loading="lazy"
                         />
                     </div>
                     <div className={styles.heartButton}>

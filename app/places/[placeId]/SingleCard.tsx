@@ -58,10 +58,10 @@ const SingleCard: React.FC<SingleCardProps> =({
             </div>
             <div className={styles.imageContainer}>
                     <Image
-                        width={1000}
-                        height={1000}
+                        width={500}
+                        height={500}
                         className={styles.nextimg}
-                        alt="Restaurant"
+                        alt={data.name || 'restaurant'}
                         src={data.picture_url || ''}
                         />
                 </div>
