@@ -21,6 +21,13 @@ Data for the database was extracted from REST API for City of Helsinki Service M
 - [Prisma]
 - [TypeScript]
 
+Possible future implementations:
+
+- Rating system
+- User can add comments
+- Add a thumbnail field for database to ensure image quality
+- Display the number of found items when displaying search results
+
 
 
 
