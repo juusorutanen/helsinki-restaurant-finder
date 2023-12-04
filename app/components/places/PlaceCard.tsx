@@ -27,7 +27,7 @@ const PlaceCard: React.FC<PlaceCardProps> =({
                         className={styles.nextimg}
                         alt="Restaurant"
                         src={data.picture_url || ''}
-                        loading="lazy"
+                        priority
                         />
                     </div>
                     <div className={styles.heartButton}>
